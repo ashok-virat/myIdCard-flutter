@@ -25,15 +25,6 @@ class _TestIdCardState extends State<TestIdCard> {
         backgroundColor:Colors.grey[850],
         elevation: 0,
       ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: (){
-            setState(() {
-              currentLevel++;
-            });
-          },
-          child: Icon(Icons.update),
-          tooltip: 'Upgarde skill',
-        ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
         child: Column(
@@ -92,6 +83,31 @@ class _TestIdCardState extends State<TestIdCard> {
                       letterSpacing: 1
                   ),
                 )
+              ],
+            ),
+            SizedBox(height:90),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children:[
+                FloatingActionButton(
+                  onPressed: (){
+                    setState(() {
+                      currentLevel++;
+                    });
+                  },
+                  child: Icon(Icons.add),
+                  tooltip: 'Upgarde skill',
+                ),
+                FloatingActionButton(
+                  onPressed: (){
+                    setState(() {
+                      currentLevel--;
+                    });
+                  },
+                  child: Icon(Icons.remove),
+                  tooltip: 'Upgarde skill',
+                ),
               ],
             )
           ],
